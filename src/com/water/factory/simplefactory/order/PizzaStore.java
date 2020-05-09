@@ -7,6 +7,8 @@ public class PizzaStore {
     public static void main(String[] args) {
 //        new PizzaOrder();
         //使用简单工厂创建对象
-        new PizzaOrder(new SimplePizzaFactory());
+//        new PizzaOrder(new SimplePizzaFactory());
+        //使用靜態的方法創建的對象
+        new PizzaOrder2();
     }
 }
