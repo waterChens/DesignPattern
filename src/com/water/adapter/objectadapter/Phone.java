@@ -1,4 +1,4 @@
-package com.water.adapter.classadapter;
+package com.water.adapter.objectadapter;
 
 public class Phone {
 
