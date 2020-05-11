@@ -15,7 +15,7 @@ public abstract class Approver {
         this.approver = approver;
     }
 
-    public Approver approver;
+    public Approver approver;//下一个审批者
 
     public Approver(String name) {
         this.name = name;
