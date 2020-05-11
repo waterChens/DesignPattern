@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 //通过cglib代理实现
+//被代理对象无需再实现接口，直接对类进行代理
 public class ProxyFactory implements MethodInterceptor {
     private Object target;
     public ProxyFactory(Object tt) {
@@ -26,8 +27,8 @@ public class ProxyFactory implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         System.out.println("进入cglib方法");
-        method.invoke(target,args);
+        Object tarVal = method.invoke(target, args);
         System.out.println("cglib方法结束");
-        return null;
+        return tarVal;
     }
 }
